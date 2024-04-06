@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIR</title>
+    <link rel="stylesheet" href="diary_style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="home_page.html" class="logo">LIEFIE</a>
+    </header>
+    
+    <div id="content" class="content">
+        <h1>Add Memeries</h1>
+
+        <div class="entry_button">
+            <a href="#" id="add-entry-btn" class="add_button">Add</a>
+        </div>
+
+
+        <div id="entry-form" style="display: none;" class="entry_form">
+            <input type="date" id="entry-date" class="date_picker">
+            <textarea id="entry-content" class="text_area"></textarea>
+            <button id="save-entry-btn" class="save_button">Save</button>
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <h2>Memeries Bank</h2>
+        <div id="entry-list"  class="saved_entrys">
+
+        </div>
+    </div>
+
+
+    <script src="diary.js"></script>
+</body>
+</html>
