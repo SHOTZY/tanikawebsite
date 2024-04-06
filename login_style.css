@@ -8,6 +8,16 @@ body {
     height: 100vh;
     background-color: #F8BDC4;
   }
+
+  .heading {
+    color: #637081;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-bottom: 550px;
+    text-decoration: underline;
+  }
   
   .login-container {
     width: 300px;
@@ -122,7 +132,25 @@ body {
   padding: 5px;
   margin-bottom: 5px;
   font-size: 12px;
-}
+  }
+
+  .heading {
+    margin-bottom: 500px;
+  }
+
+  .flower {
+    width: 40px;
+    height: 40px;
+    background: url(Photos/flower1.jpg);
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-bottom: 400px;
+    border-radius: 1rem;
+  }
 
 }
 
