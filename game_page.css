@@ -74,6 +74,6 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-.winning-cell {
-  background-color: yellow;
+.cell.winning {
+  background-color: lightseagreen;
 }
