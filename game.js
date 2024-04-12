@@ -25,6 +25,12 @@ const checkWin = () => {
     const [a, b, c] = condition;
     if (gameState[a] && gameState[a] === gameState[b] && gameState[a] === gameState[c]) {
       message.innerText = `${currentPlayer} wins!`;
+
+      // Add winning class to winning cells
+      cells[a].classList.add('winning');
+      cells[b].classList.add('winning');
+      cells[c].classList.add('winning');
+
       gameActive = false;
       updateScore(currentPlayer);
       return;
@@ -64,6 +70,7 @@ const resetGame = () => {
   message.innerText = '';
   cells.forEach(cell => {
     cell.innerText = '';
+    cell.classList.remove('winning'); // Remove winning class
   });
 };
 
