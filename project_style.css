@@ -1,5 +1,5 @@
 body {
-    background-color: #F8BDC4;
+  background-color: #f8bdc4;
 }
 
 .header {
@@ -21,7 +21,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(50px);
   z-index: -1;
 }
@@ -33,274 +33,81 @@ body {
   text-decoration: none;
 }
 
-.project_1 h1 {
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: #637081; 
-    text-decoration: underline;
-    text-decoration-thickness: 2pt ;
+.flower_heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  font-size: 16px;
+  color: whitesmoke;
+  text-decoration: underline;
 }
 
-.project_1 h2 {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    color: #637081;
+/* Flower animation styles */
+.flower-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 50px auto;
+  margin-top: 50px;
+  background-color: aliceblue;
+  border-radius: 0.5rem;
 }
 
-
-.wrapper {
-    width: 400px;
-    height: 400px;
-    background: #E9B2B8;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 450px;
-    border-radius: 1.5rem;  
-}
-  
-  .heart {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 310px;
-    margin-left: 560px;
-    
-    opacity: 0;
-    animation-name: radiate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
-    animation-fill-mode: backwards;
-    path {
-    fill: red;
-    }
-  }
-  
-  
-  .heart:nth-child(1) {
-    animation-delay: -1s;
-  }
-  .heart:nth-child(2) {
-    animation-delay: -2s;
-  }
-  .heart:nth-child(3) {
-    animation-delay: -3s;
-  }
-  .heart:nth-child(4) {
-    animation-delay: -4s;
-  }
-  .heart:nth-child(5) {
-    animation-delay: -5s;
-  }
-  
-  @keyframes radiate {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    1% {
-      opacity: 0.15;
-    }
-  
-    100% {
-      opacity: 0;
-      transform: scale(2);
-    }
-  }
-
-  .project_2 h1 {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: #637081; 
-    text-decoration: underline;
-    text-decoration-thickness: 2pt ;
+.flower {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
 }
 
-.project_2 h2 {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    color: #637081;
+.petal {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  border-radius: 50%;
+  animation: bloom 3s infinite;
 }
 
-
-.project2_wrapper {
-    width: 400px;
-    height: 400px;
-    background: #E9B2B8;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 450px;
-    border-radius: 1.5rem;  
-}
-  
-  svg {
-    height: 80vh;
-    width: 100%;
-    margin-top: 10vh;
-    opacity: 0.9
-  }
-  
-  #illustration {
-     animation: squigglevision 0.5s infinite alternate;
-  }
-  
-  @keyframes squigglevision {
-    0% {
-      filter: url('#sketch-0');
-    }
-    25% {
-      filter: url('#sketch-1');
-    }
-    50% {
-      filter: url('#sketch-2');
-    }
-    75% {
-      filter: url('#sketch-3');
-    }
-    100% {
-      filter: url('#sketch-4');
-    }
-  }
-  
-  .path {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-    animation: paint 1s ease-in-out 1s forwards;
-  }
-  
-  .path:nth-of-type(2) {
-    animation-delay: 2s;
-  }
-  
-  @keyframes paint {
-    from {
-      stroke-dashoffset: 1; 
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-
-/*BREAKPOINT*/
-
-@media (max-width: 768px) {
-  .project_1 h1 {
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: #637081; 
-    text-decoration: underline;
-    text-decoration-thickness: 2pt ;
+.petal1 {
+  top: 0;
+  left: 25px;
 }
 
-.project_1 h2 {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    color: #637081;
+.petal2 {
+  top: 25px;
+  left: 50px;
 }
 
-
-.wrapper {
-    width: 200px;
-    height: 200px;
-    background: #E9B2B8;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    margin-left:  20%;
-    border-radius: 1.5rem;  
+.petal3 {
+  top: 50px;
+  left: 25px;
 }
-  
-  .heart {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 90%;
-    margin-left: 37%;
-    
-    opacity: 0;
-    animation-name: radiate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
-    animation-fill-mode: backwards;
-    path {
-    fill: #fff;
-    }
+
+.petal4 {
+  top: 25px;
+  left: 0;
+}
+
+.center {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+@keyframes bloom {
+  0%,
+  100% {
+    transform: scale(1);
   }
-  
-  
-  .heart:nth-child(1) {
-    animation-delay: -1s;
-  }
-  .heart:nth-child(2) {
-    animation-delay: -2s;
-  }
-  .heart:nth-child(3) {
-    animation-delay: -3s;
-  }
-  .heart:nth-child(4) {
-    animation-delay: -4s;
-  }
-  .heart:nth-child(5) {
-    animation-delay: -5s;
-  }
-  
-  @keyframes radiate {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    1% {
-      opacity: 0.15;
-    }
-  
-    100% {
-      opacity: 0;
-      transform: scale(2);
-    }
+  50% {
+    transform: scale(1.2);
   }
 }
