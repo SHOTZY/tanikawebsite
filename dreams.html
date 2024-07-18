@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Dreams.css" />
+    <title>Goals and Dreams</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="home_page.html" class="logo">LIEFIE</a>
+    </header>
+
+    <div class="container">
+      <div class="section">
+        <h1>Our Dreams</h1>
+        <input type="text" id="new-dream" placeholder="Add a new dream" />
+        <button onclick="addDream()">Add</button>
+        <ul id="dreams-list"></ul>
+      </div>
+      <div class="section">
+        <h1>Our Goals</h1>
+        <input type="text" id="new-goal" placeholder="Add a new goal" />
+        <button onclick="addGoal()">Add</button>
+        <ul id="goals-list"></ul>
+      </div>
+    </div>
+    <script type="module" src="Dreams.js"></script>
+  </body>
+</html>
