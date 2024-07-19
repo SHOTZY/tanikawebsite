@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Bank</title>
+    <link rel="stylesheet" href="memory.css" />
+  </head>
+  <body>
+    <header>
+      <a href="home_page.html">Memory Bank</a>
+    </header>
+    <main>
+      <section class="form-section">
+        <h2>Add a New Memory</h2>
+        <form id="memoryForm">
+          <label for="memoryDate">Date:</label>
+          <input type="date" id="memoryDate" name="memoryDate" required />
+
+          <label for="memoryDescription">Description:</label>
+          <textarea
+            id="memoryDescription"
+            name="memoryDescription"
+            rows="4"
+            required
+          ></textarea>
+
+          <button type="submit">Save Memory</button>
+        </form>
+      </section>
+      <section class="memories-list">
+        <h2>Your Memories</h2>
+        <ul id="memoryList"></ul>
+      </section>
+    </main>
+    <script type="module" src="memory.js"></script>
+  </body>
+</html>
