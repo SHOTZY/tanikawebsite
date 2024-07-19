@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gift.css" />
+    <title>Gifts</title>
+  </head>
+  <body>
+    <header>
+      <a class="header_link" href="home_page.html">Gifts for Us</a>
+    </header>
+    <section id="add-gift">
+      <h2>Add a New Gift</h2>
+      <form id="gift-form">
+        <label for="gift-name">Gift Name:</label>
+        <input type="text" id="gift-name" required />
+
+        <label for="gift-description">Description:</label>
+        <textarea id="gift-description" required></textarea>
+
+        <label for="gift-photo">Photo:</label>
+        <input type="file" id="gift-photo" accept="image/*" required />
+
+        <button type="submit">Add Gift</button>
+      </form>
+    </section>
+    <section id="gift-list">
+      <h2>Gift List</h2>
+      <ul id="gifts"></ul>
+    </section>
+
+    <script src="gift.js"></script>
+  </body>
+</html>
