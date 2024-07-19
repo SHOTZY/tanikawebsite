@@ -1,158 +1,134 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #F8BDC4;
-  }
-
-  .heading {
-    color: #637081;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    margin-bottom: 550px;
-    text-decoration: underline;
-  }
-  
-  .login-container {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #E0E0E0;
-    color: #637081;
-  }
-  
-  .input-group {
-    margin-bottom: 10px;
-  }
-  
-  .input-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #FFF8F0;
-    color: #637081;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #FFF1F9;
-  }
-  
-  .error-message {
-    color: red;
-    font-weight: bold;
-  }
-
-
-.show_password {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  margin-bottom: 5px;
-  font-size: 12px;
+  height: 100vh;
+  background-color: #f8bdc4;
+  overflow: hidden; /* Ensure no scrollbars due to background images */
 }
 
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  color: #637081;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; /* Ensure the form is above the pattern */
+}
+
+h1 {
+  color: #637081;
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #637081;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.show-password {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #fff8f0;
+  color: #637081;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #fff1f9;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Flower Pattern as a background using pseudo-element */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("Photos/flower1.jpg") repeat;
+  background-size: 60px 60px; /* Adjust size to fit the pattern */
+  opacity: 0.2; /* Adjust opacity as needed */
+  z-index: 0; /* Place it behind the form */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .login-container {
-    width: 200px;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #E0E0E0;
-    color: #637081;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
+    max-width: 350px;
+    padding: 15px;
   }
-  
-  .input-group {
-    margin-bottom: 10px;
-    margin-right: 15px;
+
+  h2 {
+    font-size: 20px;
   }
-  
-  .input-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
+
   .input-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    font-size: 14px;
   }
-  
+
   button {
-    width: 100%;
+    font-size: 14px;
     padding: 10px;
-    background-color: #FFF8F0;
-    color: #637081;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #FFF1F9;
-  }
-  
-  .error-message {
-    color: red;
-    font-weight: bold;
   }
 
-
-.show_password {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  margin-bottom: 5px;
-  font-size: 12px;
+  .show-password {
+    font-size: 12px;
   }
-
-  .heading {
-    margin-bottom: 500px;
-  }
-
-  .flower {
-    width: 40px;
-    height: 40px;
-    background: url(Photos/flower1.jpg);
-    background-size: cover; 
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    margin-bottom: 400px;
-    border-radius: 1rem;
-  }
-
 }
-
-
-
