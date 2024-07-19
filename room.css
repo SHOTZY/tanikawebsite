@@ -1,1 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8bdc4;
+}
+
+header {
+  background-color: rgb(0, 0, 0, 0.1);
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+main {
+  padding: 2em;
+}
+
+#room-form {
+  margin-bottom: 2em;
+}
+
+form {
+  background: #ffdde1;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  resize: none;
+}
+
+input[type="file"] {
+  margin-top: 0.5em;
+}
+
+button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #333;
+  color: #ffdde1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#rooms-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#rooms-list li {
+  background: #fff;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0.5em;
+}
+
+/* Existing CSS... */
+
+button.edit {
+  background-color: #ffa500;
+}
+
+button.delete {
+  background-color: #dc143c;
+}
+
+button.edit:hover {
+  background-color: #ff8c00;
+}
+
+button.delete:hover {
+  background-color: #c71585;
+}
 
